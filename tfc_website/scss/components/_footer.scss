@@ -1,0 +1,16 @@
+
+.footer {
+  background-color: $dark-gray;
+  color: white;
+  padding-top: $verticalspace1;
+  padding-bottom: $verticalspace1;
+
+  a {
+    color: white;
+  }
+
+  ul.footermenu {
+      list-style-type: none;
+      line-height: 2.5rem;
+  }
+}
