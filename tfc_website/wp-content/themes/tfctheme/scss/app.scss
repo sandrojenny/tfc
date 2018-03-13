@@ -52,4 +52,10 @@
 @include motion-ui-animations;
 
 // Custom SCSS
-@import 'navigation';
+@import "components/variables";
+@import 'components/navigation';
+@import "components/content";
+@import "components/footer";
+@import "components/header";
+@import "components/herosection";
+@import "components/intro";

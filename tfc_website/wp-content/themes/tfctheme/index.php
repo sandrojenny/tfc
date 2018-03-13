@@ -5,8 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>the fundraising company – solutions to success.</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
   </head>
   <body>
 
@@ -119,9 +118,9 @@
     </div>
   </div>
 
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="node_modules/what-input/dist/what-input.js"></script>
-    <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
-    <script src="js/app.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/node_modules/jquery/dist/jquery.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/node_modules/what-input/dist/what-input.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/app.js"></script>
   </body>
 </html>
