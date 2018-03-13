@@ -47,47 +47,47 @@
   <div class="grid-container-fluid">
     <div class="grid-x">
       <div class="cell">
-        <div class="intro">
-          <div class="grid-container">
-            <div class="cell medium-12">
-              <div>
-                <h1><b>TFC</b> – Die Fundraising-Agentur für kleine und mittelgrosse NPO.</h1>
-                <p>FunLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.;</p>
+        <?php
+          // vars
+          $intro = get_field('intro');
+
+          if( $intro ): ?>
+            <div class="intro">
+              <div class="grid-container">
+                <div class="cell small-12 medium-12 large-12">
+                	<h1><?php echo $intro['titel']; ?></h1>
+                  <p><?php echo $intro['text']; ?></p>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
+          <?php endif; ?>
       </div>
     </div>
   </div>
 
   <div class="grid-container content">
-    <h2>Aktuelle Arbeiten</h2>
-    <div class="grid-x grid-margin-x">
-      <div class="small-4 medium-4 large-4 cell">
-        <div class="card">
-          <img src="assets/img/generic/rectangle-1.jpg">
-          <div class="card-section">
-            <p>This is a simple card with an image.</p>
+    <h2>Aktuelles aus dem Blog</h2>
+
+    <?php if (is_page('10')) { // ID der gewünschten Seite ?>
+      <?php
+      global $post;
+      $tmp_post = $post;
+      $args = array( 'numberposts' => 3, 'offset'=> 0, 'category' => 1 );
+      $myposts = get_posts( $args ); ?>
+
+      <div class="grid-x grid-margin-x">
+      <?php foreach( $myposts as $post ) : setup_postdata($post); ?>
+          <div class="small-12 medium-4 large-4 cell">
+            <div class="card">
+              <?php the_post_thumbnail() ?>
+              <div class="card-section">
+                    <?php the_title( sprintf( '<p class="entry-title"><a href="%s">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="small-4 medium-4 large-4 cell">
-        <div class="card">
-          <img src="assets/img/generic/rectangle-1.jpg">
-          <div class="card-section">
-            <p>This is a simple card with an image.</p>
-          </div>
-        </div>
-      </div>
-      <div class="small-4 medium-4 large-4 cell">
-        <div class="card">
-          <img src="assets/img/generic/rectangle-1.jpg">
-          <div class="card-section">
-            <p>This is a simple card with an image.</p>
-          </div>
-        </div>
-      </div>
+      <?php endforeach; ?>
+      <?php  $post = $tmp_post; ?>
+    <?php } // end of is_page ?>
     </div>
   </div>
 
