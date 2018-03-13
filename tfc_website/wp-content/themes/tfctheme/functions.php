@@ -4,8 +4,8 @@
   function register_my_menus() {
   register_nav_menus(
     array(
-      'header-menu' => __( 'Main' ),
-      'extra-menu' => __( 'Footer' )
+      'main' => __( 'main' ),
+      'footer' => __( 'footer' )
       )
     );
   }

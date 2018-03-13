@@ -23,11 +23,18 @@
       </div>
       <div class="medium-7 cell">
         <div class="navigation">
-          <ul class="menu align-right">
+
+          <?php wp_nav_menu( array(
+            'theme_location' => 'main',
+            'menu_class' => 'menu align-right',
+            'container' => 'ul'
+          )); ?>
+
+          <!-- <ul class="menu align-right">
             <li><a href="#">Agentur</a></li>
             <li><a href="#">Angebot</a></li>
             <li><a href="#">Blog</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Kontakt</a></li> -->
           </ul>
         </div>
       </div>
