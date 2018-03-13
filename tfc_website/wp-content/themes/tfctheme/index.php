@@ -38,7 +38,14 @@
     <div class="grid-x">
       <div class="cell">
         <div class="heroSection">
-          Hero Image
+          <?php
+          $image = get_field('hauptbild');
+
+          if( !empty($image) ): ?>
+
+          	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+          <?php endif; ?>
         </div>
       </div>
     </div>
