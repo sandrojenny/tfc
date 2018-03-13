@@ -1,3 +1,14 @@
+<?php
+/**
+ * Template Name: Blog
+ *
+ * @package WordPress
+ * @package WordPress
+ * @subpackage TFC
+ */
+?>
+
+
 <?php get_header() ?>
 
   <div class="grid-container-fluid">
@@ -36,17 +47,28 @@
   </div>
 
   <div class="grid-container content">
+    <h2>Aktuelles aus dem Blog</h2>
 
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-      <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-      <div class="entry">
-        <?php the_content(); ?>
-      </div>
-    <?php endwhile; ?>
-      <p><?php next_posts_link('&laquo; Old Posts') ?> |
-          <?php previous_posts_link('New Posts &raquo;') ?></p>
-    <?php endif; ?>
-    
+    <?php if (is_page('10')) { // ID der gewünschten Seite ?>
+      <?php
+      global $post;
+      $tmp_post = $post;
+      $args = array( 'numberposts' => 3, 'offset'=> 0, 'category' => 1 );
+      $myposts = get_posts( $args ); ?>
+
+      <div class="grid-x grid-margin-x">
+      <?php foreach( $myposts as $post ) : setup_postdata($post); ?>
+          <div class="small-12 medium-4 large-4 cell">
+            <div class="card">
+              <?php the_post_thumbnail() ?>
+              <div class="card-section">
+                    <?php the_title( sprintf( '<p class="entry-title"><a href="%s">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
+              </div>
+            </div>
+          </div>
+      <?php endforeach; ?>
+      <?php  $post = $tmp_post; ?>
+    <?php } // end of is_page ?>
     </div>
   </div>
 
