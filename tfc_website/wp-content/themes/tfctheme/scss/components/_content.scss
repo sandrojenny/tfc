@@ -10,3 +10,27 @@
     margin-bottom: $verticalspace1;
   }
 }
+
+.blog {
+  margin-top: $verticalspace1;
+  margin-bottom: $verticalspace1;
+
+  .blog-image {
+    margin-bottom: $verticalspace2;
+
+    img {
+      height:340px;
+    }
+  }
+
+  .blog-content {
+    height: 340px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: $light-gray;
+  }
+
+  h1, h2 {
+    margin-top: $verticalspace3;
+  }
+}

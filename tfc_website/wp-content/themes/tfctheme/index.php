@@ -35,18 +35,23 @@
     </div>
   </div>
 
-  <div class="grid-container content">
-
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-      <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-      <div class="entry">
-        <?php the_content(); ?>
+  <div class="grid-container blog">
+    <div class="grid-x">
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <div class="blog-image small-12 medium-12 large-5">
+          <?php the_post_thumbnail() ?>
+        </div>
+        <div class="blog-content small-12 medium-12 large-7">
+            <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+            <div class="entry">
+              <?php the_excerpt(); ?>
+            </div>
+        </div>
+      <?php endwhile; ?>
+      <?php endif; ?>
       </div>
-    <?php endwhile; ?>
       <p><?php next_posts_link('&laquo; Old Posts') ?> |
           <?php previous_posts_link('New Posts &raquo;') ?></p>
-    <?php endif; ?>
-    
     </div>
   </div>
 

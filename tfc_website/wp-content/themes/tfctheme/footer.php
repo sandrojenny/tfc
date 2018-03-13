@@ -12,12 +12,20 @@
               <p>T +41 (0)26 426 00 60  |  <a href="mailto:office@fundraising-company.ch">office (at) fundraising-company.ch</a></p>
             </div>
             <div class="cell medium-3">
-              <ul class="footermenu">
+
+              <?php wp_nav_menu( array(
+                'theme_location' => 'footer',
+                'menu_class' => 'footermenu',
+                'container' => 'ul'
+              )); ?>
+
+              <!-- <ul class="footermenu">
                 <li>Allgemeine Geschäftsbedinungen</li>
                 <li>Impressum</li>
                 <li>Datenschutzerklärung</li>
                 <li>Kontakt</li>
                 <li>Newsletter abonnieren</li>
+              -->
               </ul>
             </div>
           </div>
