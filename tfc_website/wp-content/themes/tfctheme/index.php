@@ -40,11 +40,8 @@
         <div class="heroSection">
           <?php
           $image = get_field('hauptbild');
-
           if( !empty($image) ): ?>
-
           	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
           <?php endif; ?>
         </div>
       </div>
