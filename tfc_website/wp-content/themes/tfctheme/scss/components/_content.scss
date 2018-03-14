@@ -32,5 +32,18 @@
 
   h1, h2 {
     margin-top: $verticalspace3;
+    font-weight: bold;
+  }
+}
+
+.blog-single {
+  margin-bottom: $verticalspace1;
+
+  .blog-image {
+    margin-bottom: $verticalspace2;
+  }
+
+  h1 {
+    font-weight: bold;
   }
 }

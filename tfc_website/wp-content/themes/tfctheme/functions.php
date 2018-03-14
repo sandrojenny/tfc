@@ -23,7 +23,7 @@ add_theme_support('post-thumbnails');
  * @return int (Maybe) modified excerpt length.
  */
 function wpdocs_custom_excerpt_length( $length ) {
-    return 90;
+    return 70;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 ?>
