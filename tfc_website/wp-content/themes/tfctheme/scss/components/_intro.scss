@@ -4,6 +4,7 @@
   padding-top: $verticalspace1;
   padding-bottom: $verticalspace1;
   margin-bottom: $verticalspace2;
+  min-height: 340px;
 
   h1 {
     font-size: 2rem;
@@ -13,5 +14,29 @@
     padding-top: 10px;
     line-height: 2rem;
   }
+}
 
+.dark {
+  background-color: $dark-gray;
+  color: white;
+
+  h1 {
+    color: white;
+  }
+}
+
+.green {
+  background-color: $pastel-green;
+}
+
+.blue {
+  background-color: $pastel-blue;
+}
+
+.yellow {
+  background-color: $pastel-yellow;
+}
+
+.lila {
+  background-color: $pastel-lila;
 }
