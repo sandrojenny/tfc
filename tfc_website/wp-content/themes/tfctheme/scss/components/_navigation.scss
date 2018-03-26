@@ -1,4 +1,20 @@
 
-.current-menu-item {
-  font-weight: bold;
+.navigation {
+
+  ul > li > ul.sub-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  ul > li > ul > li {
+    position: relative;
+  }
+
+  .current-menu-item {
+    font-weight: bold;
+  }
 }
