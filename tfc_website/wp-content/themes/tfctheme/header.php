@@ -24,11 +24,16 @@
       <div class="medium-7 cell">
         <div class="navigation">
 
-          <?php wp_nav_menu( array(
-            'theme_location' => 'main',
-            'menu_class' => 'menu align-right',
-            'container' => 'ul'
-          )); ?>
+          <?php wp_nav_menu(
+      			array(
+      				'theme_location' => 'main',
+      				'container'	 => false,
+      				'menu_id'	 => 'nav-primary',
+              'menu_class' => 'dropdown menu',
+      				'fallback_cb'	 => '',
+      				"walker"	 => new Drop_Menu_Walker(),
+      			)
+      		); ?>
 
           <!-- <ul class="menu align-right">
             <li><a href="#">Agentur</a></li>

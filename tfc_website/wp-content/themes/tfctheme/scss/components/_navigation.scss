@@ -1,20 +1,32 @@
 
 .navigation {
 
-  ul > li > ul.sub-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-  }
-
-
-  ul > li > ul > li {
-    position: relative;
-  }
-
-  .current-menu-item {
+  .current-menu-item > a {
     font-weight: bold;
   }
+
+  ul.sub-menu {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0 1rem 0.5rem 0;
+    position: absolute;
+    text-align: left;
+    min-width: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    a {
+      font-size: 1rem !important;
+    }
+
+    a:hover {
+      font-weight: bold;
+    }
+
+  }
+
+  ul li a:hover + .sub-menu, ul.sub-menu:hover {
+    display: block;
+  }
+
 }
