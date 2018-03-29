@@ -1,3 +1,13 @@
+<?php
+/**
+ * Template Name: Startseite
+ *
+ * @package WordPress
+ * @subpackage TFC
+ * @since TFC 1.0
+ */
+?>
+
 <?php get_header() ?>
 
   <div class="grid-container-fluid">
