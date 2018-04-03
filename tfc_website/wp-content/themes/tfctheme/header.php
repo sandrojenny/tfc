@@ -18,10 +18,10 @@
       </div>
     </div>
     <div class="nav grid-x grid-padding-x">
-      <div class="medium-5 cell">
+      <div class="logobox small-12 medium-12 large-5 cell">
         <a href="#"><div class="logo"></div></a>
       </div>
-      <div class="medium-7 cell">
+      <div class="small-12 medium-12 large-7 cell">
         <div class="navigation">
 
           <?php wp_nav_menu(
@@ -35,11 +35,19 @@
       			)
       		); ?>
 
-          <!-- <ul class="menu align-right">
-            <li><a href="#">Agentur</a></li>
-            <li><a href="#">Angebot</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Kontakt</a></li> -->
+          </ul>
+        </div>
+
+        <div class="mobile-nav">
+
+          <?php wp_nav_menu(
+      			array(
+      				'theme_location' => 'main',
+      				'container'	 => 'ul',
+              'menu_class' => 'mobile-menu'
+      			)
+      		); ?>
+
           </ul>
         </div>
       </div>

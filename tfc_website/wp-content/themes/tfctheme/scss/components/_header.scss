@@ -5,6 +5,7 @@
   margin-bottom: $verticalspace1;
 
   .languageSwitcher {
+    visibility: hidden;
     font-size: 0.9rem;
     text-align: right;
     background-color: $light-gray;

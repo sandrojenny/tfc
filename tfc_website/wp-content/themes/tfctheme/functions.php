@@ -69,7 +69,7 @@ class Drop_Menu_Walker extends Walker_Nav_Menu {
         $id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args, $depth );
         $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
         // if the list item has children add a data attribute
-        $li_attributes = $args->has_children ? ' data-dropdown' : '';
+        $li_attributes = $args->has_children ? ' ' : '';
         $output .= $indent . '<li' . $id . $class_names . $li_attributes . '>';
         $atts = array();
         $atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
