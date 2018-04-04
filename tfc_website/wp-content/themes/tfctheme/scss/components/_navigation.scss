@@ -37,6 +37,10 @@
 
 }
 
+.mobile-icon {
+  font-size: 2rem;
+}
+
 
 @media (max-width: 900px) {
 
@@ -52,6 +56,23 @@
   }
 
   .navigation {
+    display: none;
+  }
+
+  .mobile-nav {
+    height: 20px;
+    transition: height 1s;
+  }
+
+  .mobile-nav:hover {
+    height: 370px;
+  }
+
+  .mobile-nav:hover > ul, .mobile-nav:hover > ul li ul {
+    display: block;
+  }
+
+  .mobile-nav ul {
     display: none;
   }
 

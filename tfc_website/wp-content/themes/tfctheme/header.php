@@ -39,6 +39,7 @@
         </div>
 
         <div class="mobile-nav">
+          <div class="mobile-icon">&#9776;</div>
 
           <?php wp_nav_menu(
       			array(
@@ -50,6 +51,7 @@
 
           </ul>
         </div>
+        
       </div>
     </div>
   </div>
