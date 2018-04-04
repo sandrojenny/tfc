@@ -60,12 +60,13 @@
   }
 
   .mobile-nav {
-    height: 20px;
-    transition: height 1s;
+    min-height: 50px;
+    transition: min-height 2s ease-out;
+    overflow: hidden;
   }
 
   .mobile-nav:hover {
-    height: 370px;
+    min-height: 400px;
   }
 
   .mobile-nav:hover > ul, .mobile-nav:hover > ul li ul {
